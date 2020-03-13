@@ -1,0 +1,14 @@
+// a C program to swap two numbers without using third variable
+#include<stdio.h>
+int main()
+{
+    int a,b;
+    printf("Enter two numbers you want to swap\n ");
+    scanf("%d %d",&a,&b);
+    printf("Numbers before swaping: %d %d\n",a,b);
+    a=a+b;
+    b=a-b;
+    a=a-b;
+    printf("Numbers after swaping :%d %d",a,b);
+    return 0;
+}
