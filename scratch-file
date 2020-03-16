@@ -117,6 +117,38 @@ int main()
     return 0;
 
 }
+MAGIC NUMBER INITIALS
+#include<stdio.h>
+int addSquares(int n);
+int productSquares(int n);
+int main(){
+    int sum,pro,num;
+    printf("Enter any number:\n");
+    scanf("%d",&num);
+    sum=addSquares(num);
+    pro=productSquares(num);
+    printf("sum = %d,product = %d",sum,pro);
+    return 0;
+
+}
+int addSquares(int n){
+int sum=0;
+while(n>0){
+    sum=sum+(n%10)*(n%10);
+    n=n/10;
+}
+return sum;
+}
+
+int productSquares(int n){
+int product=1;
+while(n>0){
+    product=product*(n%10)*(n%10);
+    n=n/10;
+}
+return product;
+}
+
 
 
 
