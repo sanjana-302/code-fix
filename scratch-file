@@ -248,6 +248,65 @@ long fact(int n){
     }
 }
 
+BASIC MATRIX OPERATIONS
+#include<stdio.h>
+int main()
+{
+    int m,n;
+    printf("Enter number of rows and columns respectively: \n");
+    scanf("%d %d",&m,&n);
+    int a[m][n];
+    int i,j;
+    printf("\nEnter array elements:\n");
+    for(i=0;i<m;i++){
+        for(j=0;j<n;j++){
+            scanf("%d",&a[i][j]);
+        }
+    }
+
+    printf("\nYou entered the following matrix\n");
+     for(i=0;i<m;i++){
+        for(j=0;j<n;j++){
+            printf("%d\t",a[i][j]);
+        }
+        printf("\n");
+    }
+
+    printf("\nTranspose of matrix is as follows:\n");
+    for(i=0;i<m;i++){
+        for(j=0;j<n;j++){
+            printf("%d\t",a[j][i]);
+        }
+        printf("\n");
+    }
+    int sum;
+    for(i=0;i<m;i++){
+        sum=0;
+        for(j=0;j<n;j++){
+            sum=sum+a[i][j];
+        }
+        printf("Sum of %d row is : %d\n",i+1,sum);
+    }
+
+    int diag=0;
+    for(i=0;i<m;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            if(i==j || i+j==n-1)
+                diag=diag+a[i][j];
+        }
+    }
+
+    printf("Sum of diagonal elements %d",diag);
+
+
+
+
+
+}
+
+
 
 
 
